@@ -97,6 +97,7 @@ const structures = {
   VoiceChannel: require('../structures/VoiceChannel'),
   CategoryChannel: require('../structures/CategoryChannel'),
   NewsChannel: require('../structures/NewsChannel'),
+  StageChannel: require('../structures/StageChannel'),
   StoreChannel: require('../structures/StoreChannel'),
   GuildMember: require('../structures/GuildMember'),
   Guild: require('../structures/Guild'),

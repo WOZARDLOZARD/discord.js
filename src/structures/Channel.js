@@ -13,7 +13,7 @@ class Channel extends Base {
   constructor(client, data) {
     super(client);
 
-    const type = Object.keys(ChannelTypes)[data.type];
+    const type = (data.type != 13) ? Object.keys(ChannelTypes)[data.type] : "STAGE";
     /**
      * The type of the channel, either:
      * * `dm` - a DM channel
@@ -141,6 +141,10 @@ class Channel extends Base {
             channel = new NewsChannel(guild, data);
             break;
           }
+          case ChannelTypes.STAGE:
+            const StageChannel = Structures.get('StageChannel');
+            channel = new StageChannel(guild, data);
+            break;
           case ChannelTypes.STORE: {
             const StoreChannel = Structures.get('StoreChannel');
             channel = new StoreChannel(guild, data);
