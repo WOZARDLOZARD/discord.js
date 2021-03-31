@@ -94,6 +94,7 @@ module.exports = {
   ReactionEmoji: require('./structures/ReactionEmoji'),
   RichPresenceAssets: require('./structures/Presence').RichPresenceAssets,
   Role: require('./structures/Role'),
+  StageChannel: require('./structures/StageChannel'),
   StoreChannel: require('./structures/StoreChannel'),
   Team: require('./structures/Team'),
   TeamMember: require('./structures/TeamMember'),
