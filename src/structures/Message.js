@@ -180,9 +180,9 @@ class Message extends Base {
      */
     this.activity = data.activity
       ? {
-          partyID: data.activity.party_id,
-          type: data.activity.type,
-        }
+        partyID: data.activity.party_id,
+        type: data.activity.type,
+      }
       : null;
 
     if (this.member && data.member) {
@@ -211,10 +211,10 @@ class Message extends Base {
      */
     this.reference = data.message_reference
       ? {
-          channelID: data.message_reference.channel_id,
-          guildID: data.message_reference.guild_id,
-          messageID: data.message_reference.message_id,
-        }
+        channelID: data.message_reference.channel_id,
+        guildID: data.message_reference.guild_id,
+        messageID: data.message_reference.message_id,
+      }
       : null;
 
     if (data.referenced_message) {
@@ -388,8 +388,8 @@ class Message extends Base {
   get deletable() {
     return Boolean(
       !this.deleted &&
-        (this.author.id === this.client.user.id ||
-          this.channel.permissionsFor?.(this.client.user)?.has(Permissions.FLAGS.MANAGE_MESSAGES)),
+      (this.author.id === this.client.user.id ||
+        this.channel.permissionsFor?.(this.client.user)?.has(Permissions.FLAGS.MANAGE_MESSAGES)),
     );
   }
 
@@ -580,8 +580,8 @@ class Message extends Base {
       content instanceof APIMessage
         ? content
         : APIMessage.transformOptions(content, options, {
-            replyTo: this,
-          }),
+          replyTo: this,
+        }),
     );
   }
 
