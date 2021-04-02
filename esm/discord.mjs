@@ -82,6 +82,7 @@ export const {
   ReactionEmoji,
   RichPresenceAssets,
   Role,
+  StageChannel,
   StoreChannel,
   Team,
   TeamMember,
