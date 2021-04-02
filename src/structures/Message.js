@@ -180,9 +180,9 @@ class Message extends Base {
      */
     this.activity = data.activity
       ? {
-          partyID: data.activity.party_id,
-          type: data.activity.type,
-        }
+        partyID: data.activity.party_id,
+        type: data.activity.type,
+      }
       : null;
 
     /**
@@ -218,10 +218,10 @@ class Message extends Base {
      */
     this.reference = data.message_reference
       ? {
-          channelID: data.message_reference.channel_id,
-          guildID: data.message_reference.guild_id,
-          messageID: data.message_reference.message_id,
-        }
+        channelID: data.message_reference.channel_id,
+        guildID: data.message_reference.guild_id,
+        messageID: data.message_reference.message_id,
+      }
       : null;
   }
 
